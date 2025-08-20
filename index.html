@@ -79,8 +79,17 @@
 
 <script>
 const qs = new URLSearchParams(location.search);
-const API = (qs.get("api") || "http://127.0.0.1:8000").replace(/\/+$/,'');
 
+
+  
+const API = (
+  qs.get("api") || "https://realm-postcards-signs-identical.trycloudflare.com"
+).replace(/\/+$/,'');
+
+
+
+
+  
 const $ = s => document.querySelector(s);
 const out = $("#out"), btn = $("#send"), clr = $("#clear");
 
@@ -116,3 +125,4 @@ clr.addEventListener("click", () => { $("#prompt").value=""; out.textContent="";
 </script>
 </body>
 </html>
+
